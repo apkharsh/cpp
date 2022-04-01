@@ -35,7 +35,6 @@ class StackUsingArray{
 			}
 			nextIndex--;
 			return stack[nextIndex];
-
 		}
 
 		int top(){
