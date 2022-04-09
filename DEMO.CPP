@@ -13,35 +13,14 @@ int main()
     // cin.ignore(); must be there when using getline(cin, s)
     while (T--)
     {
-        int N;
-        cin >> N;
-        int arr[N];
-        // input lelia hai
-        for (int i = 0; i < N; i++) {
-            cin >> arr[i];
+        int X, Y;
+        cin >> X >> Y;
+        if(X<Y){
+            cout << "NO" << endl;
         }
-
-        int sum = accumulate(arr, arr+N, 0);
-
-        int a = 1;
-        int steps = 0;
-
-        while(sum>0){
-           sum = sum - a;
-           a = a + 1; 
-           steps = steps + 1;
-    
-        }
-
-        // cout << "Steps ki value " << steps;
-
-        if(sum>0){
-            cout <<steps << endl;
-        }
-        else cout << steps-1 << endl;
-
+        else cout << "YES" << endl;
     }
     return 0;
 }
 
-// Submitted by apkharsh
+// Submitted by apkharshnvm install --lts
