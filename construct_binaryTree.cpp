@@ -1,0 +1,1 @@
+// Logic samanj agya hai lekin code nahi.. will try again later..

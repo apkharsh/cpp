@@ -1,18 +1,30 @@
 #include <bits/stdc++.h>
+#include <cstdio>
+#include <cstring>
+#include <cmath>
+
 using namespace std;
+int main()
+{
+	std::ios::sync_with_stdio(false);
+	int T;
+	cin >> T;
+	// cin.ignore(); must be there when using getline(cin, s)
+	while (T--)
+	{
+		long long N; cin >> N;
+		long long B = 3;
 
-int main(){
-	int seven;
-	int four;
-	for(int i = 0; i <12; i ++){
-		seven = 7*7;
-		four = 4*4;
+		if (N % 2 == 0 && N % 4 == 0) {
+			B = N^3;
+		}
+		else if ((N - 1) % 4 == 0) {
+			B = N&(3 ^ (N - 1));
+		}
+
+		cout << B << endl;
 	}
-	cout << seven - four;
-
-
-
-    return 0;
+	return 0;
 }
 
 // Submitted by apkharsh
