@@ -1,4 +1,3 @@
-
 #include <bits/stdc++.h>
 #include <cstdio>
 #include <cstring>
@@ -13,20 +12,31 @@ int main()
     // cin.ignore(); must be there when using getline(cin, s)
     while (T--)
     {
-        bool check = false;
-        int X; cin >> X;
-        int a = 0; int b = 1; int c = -1;
-        for (int C = 0; C < pow(2,20); C++) {
-            if ((a ^ b + b ^ c + c ^ a) == X) {
-                cout << a << b << c;
-                check = true;
+        int N, X;
+        cin >> N >> X;
+
+        int arr[N];
+        for (int i = 0; i < N; i++) {
+            cin >> arr[i];
+        }
+        sort(arr, arr + N);
+
+        if (arr[0] == 1) {
+                cout << max(N, X) << endl;
+            }
+            else if (arr[0] >= X) {
+                cout << min(N, X) << endl;
             }
 
-        }
+            else {
+                if (X % arr[0] == 0) {
+                    cout << X / arr[0] << endl;
+                }
+                else {
+                    cout << (X / arr[0]) + 1 << endl;
+                }
 
-        if(check) cout << a << " " << b <<" " <<  c << endl;
-        else cout << -1 << endl;
-
+            }
     }
     return 0;
 }
