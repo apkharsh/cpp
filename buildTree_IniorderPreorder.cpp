@@ -55,7 +55,6 @@ void InorderPrint(Node* root) {
 
 }
 
-
 int main() {
 	int Preorder[5] = {1, 2, 4, 3, 5};
 	int Inorder[5] = {4, 2, 1, 5, 3};
