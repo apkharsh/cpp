@@ -34,7 +34,7 @@ int main() {
 		cout << low;
 	}
 	else if (arr[high] == key) {
-		return high;
+		cout << high;
 	}
 	else cout << "Not Found";
 	// cout << binarySearch(arr, n, key);

@@ -47,4 +47,4 @@ int main() {
 		return 0;
 }
 
-//Contributed by apkharsh
+//submitted by apkharsh

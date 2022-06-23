@@ -53,3 +53,10 @@ int main() {
 }
 
 // Submitted by apkharsh
+
+
+
+
+
+// int **arr = new int*[n];
+ 

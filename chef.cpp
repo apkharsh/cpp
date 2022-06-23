@@ -7,24 +7,24 @@ using namespace std;
 int main()
 {
     std::ios::sync_with_stdio(false);
-
     int T;
-    // cin >> T;
-    cout << "harsh" << endl;
+    cin >> T;
     // cin.ignore(); must be there when using getline(cin, s)
-    // while (T--)
-    // {
-    //     int n; cin >> n;
+    while (T--)
+    {
+        int N; cin >> N;
+        string S; cin >> S;
+        int counter = 0;
+        for(int i = 1; i<N; i++){
+            if(S[i-1]!=S[i]) counter++;
+        }
+        if(counter%2==0){
+            cout << counter/2 +1  << endl;
+        }
+        else cout << counter/2 -1 << endl;
 
-    //     if(a==1){
-    //         cout << a << endl;
-    //     }
-    //     else if(a>2 && a<4){
-    //         cout << a-1 << endl;
-    //     }
-    //     else cout << a << endl;
-    // }
+    }
     return 0;
 }
-// 1 2 4 8 16
+
 // Submitted by apkharsh
